@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE chess PUBLIC "-//A.Saremba//DTD chessgml//EN" "chess.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<cgml xmlns="http://www.w3.org/2000/10/XMLSchema" xml:lang=en>
 <!-- $Id: 1907-karlsbad.san.xml,v 1.2 2000/03/11 14:11:50 sar Exp -->
 <chess>
 <tournament>
 <eventinfo>
-<event>Großes Internationales Schachmeister-Turnier</event>
+<event>GroÃŸes Internationales Schachmeister-Turnier</event>
 <site>Karlsbad</site></eventinfo>
 <players>
 ...
   <player id="Maroczy.Geza" table-ref="sw-2">
     <person cbuffId="Maroczy,G">
-      <surname>Maróczy</surname><firstname>Geza</firstname>
+      <surname>MarÃ³czy</surname><firstname>Geza</firstname>
     </person>
   </player>
 ...
@@ -64,3 +64,4 @@ Nf4 Re4 43. Nd5 Re2 44. Nf4 Re4 45. Nd5 Re2 1/2-1/2
 </rounds>
 </tournament>
 </chess>
+</cgml>
