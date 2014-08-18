@@ -1,0 +1,1486 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.w3.org/namespace/'
+  xmlns:t='http://www.w3.org/namespace/'>
+
+ <element name='person'>
+  <complexType>
+   <sequence minOccurs='0' maxOccurs='1'>
+    <element ref='t:title' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:surname'/>
+    <element ref='t:firstname'/>
+   </sequence>
+   <attribute name='cbuffId' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='title'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='surname'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='firstname'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='computer'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='pos'>
+  <complexType>
+   <sequence>
+    <element ref='t:fen'/>
+    <element ref='t:diagram' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='fen'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='sqSet'>
+  <complexType>
+   <choice>
+    <element ref='t:sqFile'/>
+    <element ref='t:sqRank'/>
+    <element ref='t:sqDiagonal'/>
+    <element ref='t:sqBlock'/>
+    <element ref='t:sqOther'/>
+   </choice>
+  </complexType>
+ </element>
+
+ <element name='sqfile'>
+  <complexType>
+   <attribute name='f' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='a'/>
+      <enumeration value='b'/>
+      <enumeration value='c'/>
+      <enumeration value='d'/>
+      <enumeration value='e'/>
+      <enumeration value='f'/>
+      <enumeration value='g'/>
+      <enumeration value='h'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='sqrank'>
+  <complexType>
+   <attribute name='r' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='1'/>
+      <enumeration value='2'/>
+      <enumeration value='3'/>
+      <enumeration value='4'/>
+      <enumeration value='5'/>
+      <enumeration value='6'/>
+      <enumeration value='7'/>
+      <enumeration value='8'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='sqDiagonal'>
+  <complexType>
+   <sequence>
+    <element ref='t:sq'/>
+    <element ref='t:sq'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='sqBlock'>
+  <complexType>
+   <sequence>
+    <element ref='t:sq'/>
+    <element ref='t:sq'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='sqOther'>
+  <complexType>
+   <sequence>
+    <element ref='t:sq' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='sq'>
+  <complexType>
+   <attribute name='n' type='string' use='required'/>
+  </complexType>
+ </element>
+
+ <element name='a1'>
+  <complexType/>
+ </element>
+
+ <element name='a2'>
+  <complexType/>
+ </element>
+
+ <element name='a3'>
+  <complexType/>
+ </element>
+
+ <element name='a4'>
+  <complexType/>
+ </element>
+
+ <element name='a5'>
+  <complexType/>
+ </element>
+
+ <element name='a6'>
+  <complexType/>
+ </element>
+
+ <element name='a7'>
+  <complexType/>
+ </element>
+
+ <element name='a8'>
+  <complexType/>
+ </element>
+
+ <element name='b1'>
+  <complexType/>
+ </element>
+
+ <element name='b2'>
+  <complexType/>
+ </element>
+
+ <element name='b3'>
+  <complexType/>
+ </element>
+
+ <element name='b4'>
+  <complexType/>
+ </element>
+
+ <element name='b5'>
+  <complexType/>
+ </element>
+
+ <element name='b6'>
+  <complexType/>
+ </element>
+
+ <element name='b7'>
+  <complexType/>
+ </element>
+
+ <element name='b8'>
+  <complexType/>
+ </element>
+
+ <element name='c1'>
+  <complexType/>
+ </element>
+
+ <element name='c2'>
+  <complexType/>
+ </element>
+
+ <element name='c3'>
+  <complexType/>
+ </element>
+
+ <element name='c4'>
+  <complexType/>
+ </element>
+
+ <element name='c5'>
+  <complexType/>
+ </element>
+
+ <element name='c6'>
+  <complexType/>
+ </element>
+
+ <element name='c7'>
+  <complexType/>
+ </element>
+
+ <element name='c8'>
+  <complexType/>
+ </element>
+
+ <element name='d1'>
+  <complexType/>
+ </element>
+
+ <element name='d2'>
+  <complexType/>
+ </element>
+
+ <element name='d3'>
+  <complexType/>
+ </element>
+
+ <element name='d4'>
+  <complexType/>
+ </element>
+
+ <element name='d5'>
+  <complexType/>
+ </element>
+
+ <element name='d6'>
+  <complexType/>
+ </element>
+
+ <element name='d7'>
+  <complexType/>
+ </element>
+
+ <element name='d8'>
+  <complexType/>
+ </element>
+
+ <element name='e1'>
+  <complexType/>
+ </element>
+
+ <element name='e2'>
+  <complexType/>
+ </element>
+
+ <element name='e3'>
+  <complexType/>
+ </element>
+
+ <element name='e4'>
+  <complexType/>
+ </element>
+
+ <element name='e5'>
+  <complexType/>
+ </element>
+
+ <element name='e6'>
+  <complexType/>
+ </element>
+
+ <element name='e7'>
+  <complexType/>
+ </element>
+
+ <element name='e8'>
+  <complexType/>
+ </element>
+
+ <element name='f1'>
+  <complexType/>
+ </element>
+
+ <element name='f2'>
+  <complexType/>
+ </element>
+
+ <element name='f3'>
+  <complexType/>
+ </element>
+
+ <element name='f4'>
+  <complexType/>
+ </element>
+
+ <element name='f5'>
+  <complexType/>
+ </element>
+
+ <element name='f6'>
+  <complexType/>
+ </element>
+
+ <element name='f7'>
+  <complexType/>
+ </element>
+
+ <element name='f8'>
+  <complexType/>
+ </element>
+
+ <element name='g1'>
+  <complexType/>
+ </element>
+
+ <element name='g2'>
+  <complexType/>
+ </element>
+
+ <element name='g3'>
+  <complexType/>
+ </element>
+
+ <element name='g4'>
+  <complexType/>
+ </element>
+
+ <element name='g5'>
+  <complexType/>
+ </element>
+
+ <element name='g6'>
+  <complexType/>
+ </element>
+
+ <element name='g7'>
+  <complexType/>
+ </element>
+
+ <element name='g8'>
+  <complexType/>
+ </element>
+
+ <element name='h1'>
+  <complexType/>
+ </element>
+
+ <element name='h2'>
+  <complexType/>
+ </element>
+
+ <element name='h3'>
+  <complexType/>
+ </element>
+
+ <element name='h4'>
+  <complexType/>
+ </element>
+
+ <element name='h5'>
+  <complexType/>
+ </element>
+
+ <element name='h6'>
+  <complexType/>
+ </element>
+
+ <element name='h7'>
+  <complexType/>
+ </element>
+
+ <element name='h8'>
+  <complexType/>
+ </element>
+
+ <element name='diagrams'>
+  <complexType>
+   <sequence minOccurs='0' maxOccurs='unbounded'>
+    <element ref='t:diagram'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='diagram'>
+  <complexType>
+   <sequence minOccurs='0' maxOccurs='unbounded'>
+    <element ref='t:diarow'/>
+   </sequence>
+   <attribute name='why' use='default' value='orig'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='orig'/>
+      <enumeration value='important'/>
+      <enumeration value='generated'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='importance' type='string' use='optional'/>
+   <attribute name='nr' type='string' use='required'/>
+   <attribute name='c' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='where' use='default' value='aft'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='bef'/>
+      <enumeration value='aft'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='diarow'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:dsq'/>
+   </sequence>
+   <attribute name='r' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='1'/>
+      <enumeration value='2'/>
+      <enumeration value='3'/>
+      <enumeration value='4'/>
+      <enumeration value='5'/>
+      <enumeration value='6'/>
+      <enumeration value='7'/>
+      <enumeration value='8'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='dsq'>
+  <complexType>
+   <sequence>
+    <element ref='t:p' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+   <attribute name='c' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='moves'>
+  <complexType>
+   <choice>
+    <element ref='t:sanMoves'/>
+    <sequence minOccurs='0' maxOccurs='unbounded'>
+     <element ref='t:mp'/>
+    </sequence>
+   </choice>
+   <attribute name='ply-count' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='sanMoves'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='mp'>
+  <complexType>
+   <sequence>
+    <element ref='t:m'/>
+    <element ref='t:ilcomment' minOccurs='0' maxOccurs='1'/>
+    <sequence minOccurs='0' maxOccurs='1'>
+     <element ref='t:m'/>
+     <element ref='t:ilcomment' minOccurs='0' maxOccurs='1'/>
+    </sequence>
+   </sequence>
+   <attribute name='nr' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='m'>
+  <complexType>
+   <sequence>
+    <element ref='t:p' minOccurs='0' maxOccurs='1'/>
+    <choice>
+     <element ref='t:sq'/>
+     <element ref='t:a1'/>
+     <element ref='t:a2'/>
+     <element ref='t:a3'/>
+     <element ref='t:a4'/>
+     <element ref='t:a5'/>
+     <element ref='t:a6'/>
+     <element ref='t:a7'/>
+     <element ref='t:a8'/>
+     <element ref='t:b1'/>
+     <element ref='t:b2'/>
+     <element ref='t:b3'/>
+     <element ref='t:b4'/>
+     <element ref='t:b5'/>
+     <element ref='t:b6'/>
+     <element ref='t:b7'/>
+     <element ref='t:b8'/>
+     <element ref='t:c1'/>
+     <element ref='t:c2'/>
+     <element ref='t:c3'/>
+     <element ref='t:c4'/>
+     <element ref='t:c5'/>
+     <element ref='t:c6'/>
+     <element ref='t:c7'/>
+     <element ref='t:c8'/>
+     <element ref='t:d1'/>
+     <element ref='t:d2'/>
+     <element ref='t:d3'/>
+     <element ref='t:d4'/>
+     <element ref='t:d5'/>
+     <element ref='t:d6'/>
+     <element ref='t:d7'/>
+     <element ref='t:d8'/>
+     <element ref='t:e1'/>
+     <element ref='t:e2'/>
+     <element ref='t:e3'/>
+     <element ref='t:e4'/>
+     <element ref='t:e5'/>
+     <element ref='t:e6'/>
+     <element ref='t:e7'/>
+     <element ref='t:e8'/>
+     <element ref='t:f1'/>
+     <element ref='t:f2'/>
+     <element ref='t:f3'/>
+     <element ref='t:f4'/>
+     <element ref='t:f5'/>
+     <element ref='t:f6'/>
+     <element ref='t:f7'/>
+     <element ref='t:f8'/>
+     <element ref='t:g1'/>
+     <element ref='t:g2'/>
+     <element ref='t:g3'/>
+     <element ref='t:g4'/>
+     <element ref='t:g5'/>
+     <element ref='t:g6'/>
+     <element ref='t:g7'/>
+     <element ref='t:g8'/>
+     <element ref='t:h1'/>
+     <element ref='t:h2'/>
+     <element ref='t:h3'/>
+     <element ref='t:h4'/>
+     <element ref='t:h5'/>
+     <element ref='t:h6'/>
+     <element ref='t:h7'/>
+     <element ref='t:h8'/>
+    </choice>
+    <choice>
+     <element ref='t:sq'/>
+     <element ref='t:a1'/>
+     <element ref='t:a2'/>
+     <element ref='t:a3'/>
+     <element ref='t:a4'/>
+     <element ref='t:a5'/>
+     <element ref='t:a6'/>
+     <element ref='t:a7'/>
+     <element ref='t:a8'/>
+     <element ref='t:b1'/>
+     <element ref='t:b2'/>
+     <element ref='t:b3'/>
+     <element ref='t:b4'/>
+     <element ref='t:b5'/>
+     <element ref='t:b6'/>
+     <element ref='t:b7'/>
+     <element ref='t:b8'/>
+     <element ref='t:c1'/>
+     <element ref='t:c2'/>
+     <element ref='t:c3'/>
+     <element ref='t:c4'/>
+     <element ref='t:c5'/>
+     <element ref='t:c6'/>
+     <element ref='t:c7'/>
+     <element ref='t:c8'/>
+     <element ref='t:d1'/>
+     <element ref='t:d2'/>
+     <element ref='t:d3'/>
+     <element ref='t:d4'/>
+     <element ref='t:d5'/>
+     <element ref='t:d6'/>
+     <element ref='t:d7'/>
+     <element ref='t:d8'/>
+     <element ref='t:e1'/>
+     <element ref='t:e2'/>
+     <element ref='t:e3'/>
+     <element ref='t:e4'/>
+     <element ref='t:e5'/>
+     <element ref='t:e6'/>
+     <element ref='t:e7'/>
+     <element ref='t:e8'/>
+     <element ref='t:f1'/>
+     <element ref='t:f2'/>
+     <element ref='t:f3'/>
+     <element ref='t:f4'/>
+     <element ref='t:f5'/>
+     <element ref='t:f6'/>
+     <element ref='t:f7'/>
+     <element ref='t:f8'/>
+     <element ref='t:g1'/>
+     <element ref='t:g2'/>
+     <element ref='t:g3'/>
+     <element ref='t:g4'/>
+     <element ref='t:g5'/>
+     <element ref='t:g6'/>
+     <element ref='t:g7'/>
+     <element ref='t:g8'/>
+     <element ref='t:h1'/>
+     <element ref='t:h2'/>
+     <element ref='t:h3'/>
+     <element ref='t:h4'/>
+     <element ref='t:h5'/>
+     <element ref='t:h6'/>
+     <element ref='t:h7'/>
+     <element ref='t:h8'/>
+    </choice>
+   </sequence>
+   <attribute name='c' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='b'/>
+      <enumeration value='w'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='spec' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='0-0'/>
+      <enumeration value='0-0-0'/>
+      <enumeration value='ep'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='illegal' type='string' use='optional'/>
+   <attribute name='capt' type='string' use='optional'/>
+   <attribute name='chk' type='string' use='optional'/>
+   <attribute name='mate' type='string' use='optional'/>
+   <attribute name='prpi' type='string' use='optional'/>
+   <attribute name='dsan' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='var'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:mp'/>
+    <element ref='t:var'/>
+    <element ref='t:ilcomment'/>
+   </choice>
+  </complexType>
+ </element>
+
+ <element name='p'>
+  <complexType>
+   <attribute name='c' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='n' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='k'/>
+      <enumeration value='q'/>
+      <enumeration value='r'/>
+      <enumeration value='b'/>
+      <enumeration value='n'/>
+      <enumeration value='p'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='setofcomments'>
+  <complexType>
+   <sequence>
+    <element ref='t:source' minOccurs='0' maxOccurs='1'/>
+    <sequence minOccurs='0' maxOccurs='unbounded'>
+     <element ref='t:comment'/>
+    </sequence>
+    <element ref='t:diagrams' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+   <attribute name='id' type='ID' use='optional'/>
+   <attribute name='lang' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='source'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='comment'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:moveEval'/>
+    <element ref='t:posEval'/>
+    <element ref='t:posChars'/>
+    <element ref='t:game'/>
+    <element ref='t:situation'/>
+    <element ref='t:var'/>
+    <element ref='t:text'/>
+   </choice>
+   <attribute name='type' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='m'/>
+      <enumeration value='p'/>
+      <enumeration value='g'/>
+      <enumeration value='o'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='ID' use='optional'/>
+   <attribute name='nr' type='string' use='optional'/>
+   <attribute name='c' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='where' use='default' value='in'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='bef'/>
+      <enumeration value='aft'/>
+      <enumeration value='in'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='ilcomment'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:moveEval'/>
+    <element ref='t:posEval'/>
+    <element ref='t:posChars'/>
+    <element ref='t:game'/>
+    <element ref='t:situation'/>
+    <element ref='t:var'/>
+    <element ref='t:text'/>
+   </choice>
+   <attribute name='type' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='m'/>
+      <enumeration value='p'/>
+      <enumeration value='g'/>
+      <enumeration value='o'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='ID' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='moveEval'>
+  <complexType>
+   <attribute name='eval' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='good'/>
+      <enumeration value='poor'/>
+      <enumeration value='vgood'/>
+      <enumeration value='vpoor'/>
+      <enumeration value='better'/>
+      <enumeration value='spec'/>
+      <enumeration value='quest'/>
+      <enumeration value='only'/>
+      <enumeration value='forced'/>
+      <enumeration value='worst'/>
+      <enumeration value='difRef'/>
+      <enumeration value='notBest'/>
+      <enumeration value='careless'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='IDREF' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='posEval'>
+  <complexType>
+   <attribute name='eval' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='even'/>
+      <enumeration value='unclear'/>
+      <enumeration value='wCompMat'/>
+      <enumeration value='bCompMat'/>
+      <enumeration value='wSlAdv'/>
+      <enumeration value='wAdv'/>
+      <enumeration value='wDecAdv'/>
+      <enumeration value='bSlAdv'/>
+      <enumeration value='bAdv'/>
+      <enumeration value='bDecAdv'/>
+      <enumeration value='drawish'/>
+      <enumeration value='equalQuiet'/>
+      <enumeration value='equalActive'/>
+      <enumeration value='wCruAdv'/>
+      <enumeration value='bCruAdv'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='IDREF' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='posChars'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:stPosChar'/>
+    <element ref='t:dynPosChar'/>
+   </choice>
+   <attribute name='id' type='ID' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='stposChar'>
+  <complexType>
+   <sequence>
+    <element ref='t:squares'/>
+   </sequence>
+   <attribute name='char' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='devAdv'/>
+      <enumeration value='moreRoom'/>
+      <enumeration value='attack'/>
+      <enumeration value='initiave'/>
+      <enumeration value='counterplay'/>
+      <enumeration value='zugzwang'/>
+      <enumeration value='ending'/>
+      <enumeration value='weakSq'/>
+      <enumeration value='2bishops'/>
+      <enumeration value='oppBishops'/>
+      <enumeration value='sameBishops'/>
+      <enumeration value='uniPawns'/>
+      <enumeration value='sepPawns'/>
+      <enumeration value='dPawns'/>
+      <enumeration value='pPawn'/>
+      <enumeration value='mPawns'/>
+      <enumeration value='weak1rank'/>
+      <enumeration value='wellCoordP'/>
+      <enumeration value='rooks7r'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='who' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+      <enumeration value='g'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='ID' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='dynposChar'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:threat'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='threat'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='text'>
+  <complexType mixed='true'>
+   <choice minOccurs='0' maxOccurs='unbounded'>
+    <element ref='t:playerName'/>
+    <element ref='t:mp'/>
+    <element ref='t:m'/>
+    <element ref='t:sq'/>
+    <element ref='t:a1'/>
+    <element ref='t:a2'/>
+    <element ref='t:a3'/>
+    <element ref='t:a4'/>
+    <element ref='t:a5'/>
+    <element ref='t:a6'/>
+    <element ref='t:a7'/>
+    <element ref='t:a8'/>
+    <element ref='t:b1'/>
+    <element ref='t:b2'/>
+    <element ref='t:b3'/>
+    <element ref='t:b4'/>
+    <element ref='t:b5'/>
+    <element ref='t:b6'/>
+    <element ref='t:b7'/>
+    <element ref='t:b8'/>
+    <element ref='t:c1'/>
+    <element ref='t:c2'/>
+    <element ref='t:c3'/>
+    <element ref='t:c4'/>
+    <element ref='t:c5'/>
+    <element ref='t:c6'/>
+    <element ref='t:c7'/>
+    <element ref='t:c8'/>
+    <element ref='t:d1'/>
+    <element ref='t:d2'/>
+    <element ref='t:d3'/>
+    <element ref='t:d4'/>
+    <element ref='t:d5'/>
+    <element ref='t:d6'/>
+    <element ref='t:d7'/>
+    <element ref='t:d8'/>
+    <element ref='t:e1'/>
+    <element ref='t:e2'/>
+    <element ref='t:e3'/>
+    <element ref='t:e4'/>
+    <element ref='t:e5'/>
+    <element ref='t:e6'/>
+    <element ref='t:e7'/>
+    <element ref='t:e8'/>
+    <element ref='t:f1'/>
+    <element ref='t:f2'/>
+    <element ref='t:f3'/>
+    <element ref='t:f4'/>
+    <element ref='t:f5'/>
+    <element ref='t:f6'/>
+    <element ref='t:f7'/>
+    <element ref='t:f8'/>
+    <element ref='t:g1'/>
+    <element ref='t:g2'/>
+    <element ref='t:g3'/>
+    <element ref='t:g4'/>
+    <element ref='t:g5'/>
+    <element ref='t:g6'/>
+    <element ref='t:g7'/>
+    <element ref='t:g8'/>
+    <element ref='t:h1'/>
+    <element ref='t:h2'/>
+    <element ref='t:h3'/>
+    <element ref='t:h4'/>
+    <element ref='t:h5'/>
+    <element ref='t:h6'/>
+    <element ref='t:h7'/>
+    <element ref='t:h8'/>
+   </choice>
+   <attribute name='id' type='ID' use='optional'/>
+   <attribute name='lang' type='ENTITIES' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='playerName'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='situation'>
+  <complexType>
+   <attribute name='sit' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='timePress'/>
+      <enumeration value='noisy'/>
+      <enumeration value='adjournament'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='id' type='IDREF' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='setOfPositions'>
+  <complexType>
+   <sequence>
+    <element ref='t:sopMeta' minOccurs='0' maxOccurs='1'/>
+    <choice maxOccurs='unbounded'>
+     <element ref='t:study'/>
+     <element ref='t:problem'/>
+     <element ref='t:position'/>
+    </choice>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='sopMeta'>
+  <complexType>
+   <sequence>
+    <element ref='t:sopTitle'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='sopTitle'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='position'>
+  <complexType>
+   <sequence>
+    <element ref='t:posMeta'/>
+    <element ref='t:pos'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='problem'>
+  <complexType>
+   <sequence>
+    <element ref='t:spMeta'/>
+    <element ref='t:pos'/>
+    <element ref='t:solution' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+   <attribute name='type' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='mate'/>
+      <enumeration value='selfmate'/>
+      <enumeration value='helpmate'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='moves' type='string' use='required'/>
+  </complexType>
+ </element>
+
+ <element name='study'>
+  <complexType>
+   <sequence>
+    <element ref='t:spMeta'/>
+    <element ref='t:pos'/>
+    <element ref='t:solution' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+   <attribute name='type' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='win'/>
+      <enumeration value='draw'/>
+      <enumeration value='findout'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='spMeta'>
+  <complexType>
+   <sequence>
+    <choice>
+     <element ref='t:composers'/>
+     <element ref='t:composer'/>
+    </choice>
+    <element ref='t:firstPub'/>
+    <element ref='t:competition' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:motto' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='composers'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:composer'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='composer'>
+  <complexType>
+   <sequence>
+    <element ref='t:person'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='firstPub'>
+  <complexType>
+   <sequence>
+    <element ref='t:publ'/>
+    <element ref='t:date'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='publ'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='competition'>
+  <complexType>
+   <sequence>
+    <element ref='t:compname'/>
+    <element ref='t:prize' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='compname'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='prize'>
+  <complexType mixed='true'>
+   <attribute name='rank' type='string' use='optional'/>
+   <attribute name='shared' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='0'/>
+      <enumeration value='1'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+  </complexType>
+ </element>
+
+ <element name='motto'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='solution'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='chess'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:wcc'/>
+    <element ref='t:tournament'/>
+    <element ref='t:match'/>
+    <element ref='t:teamevent'/>
+    <element ref='t:games'/>
+    <element ref='t:game'/>
+    <element ref='t:study'/>
+    <element ref='t:problem'/>
+    <element ref='t:position'/>
+    <element ref='t:setOfPositions'/>
+    <element ref='t:setofcomments'/>
+    <element ref='t:diagrams'/>
+   </choice>
+   <attribute name='dtd-major-version' type='string' use='fixed' value='0'/>
+   <attribute name='dtd-minor-version' type='string' use='fixed' value='1'/>
+  </complexType>
+ </element>
+
+ <element name='tournament'>
+  <complexType>
+   <sequence>
+    <element ref='t:rules' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:eventinfo' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:players' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:crosstable' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:swiss-table' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:rounds' maxOccurs='unbounded'/>
+   </sequence>
+   <attribute name='type' use='default' value='rr'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='rr'/>
+      <enumeration value='swiss'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='nr-cycles' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='crosstable'>
+  <complexType>
+   <sequence>
+    <element ref='t:ct-line' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='swiss-table'>
+  <complexType>
+   <sequence>
+    <element ref='t:swiss-line' maxOccurs='unbounded'/>
+   </sequence>
+   <attribute name='nr-rounds' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='ct-line'>
+  <complexType>
+   <sequence>
+    <element ref='t:player-ref'/>
+    <choice maxOccurs='unbounded'>
+     <element ref='t:self'/>
+     <element ref='t:result'/>
+     <element ref='t:mresult'/>
+    </choice>
+   </sequence>
+   <attribute name='rank' type='string' use='optional'/>
+   <attribute name='equalWithNext' use='default' value='0'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='0'/>
+      <enumeration value='1'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='points' type='string' use='required'/>
+   <attribute name='halfpoint' type='string' use='optional'/>
+   <attribute name='fine-points' type='string' use='optional'/>
+   <attribute name='fine-halfpoint' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='swiss-line'>
+  <complexType>
+   <sequence>
+    <element ref='t:player-ref'/>
+    <element ref='t:result' maxOccurs='unbounded'/>
+   </sequence>
+   <attribute name='id' type='ID' use='required'/>
+   <attribute name='rank' type='string' use='optional'/>
+   <attribute name='equalWithNext' use='default' value='0'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='0'/>
+      <enumeration value='1'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='points' type='string' use='required'/>
+   <attribute name='halfpoint' type='string' use='optional'/>
+   <attribute name='fine-points' type='string' use='optional'/>
+   <attribute name='fine-halfpoint' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='self'>
+  <complexType/>
+ </element>
+
+ <element name='mresult'>
+  <complexType>
+   <sequence>
+    <element ref='t:result' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='rounds'>
+  <complexType>
+   <sequence>
+    <element ref='t:round' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='round'>
+  <complexType>
+   <sequence>
+    <element ref='t:roundinfo'/>
+    <element ref='t:game' maxOccurs='unbounded'/>
+   </sequence>
+   <attribute name='nr' type='string' use='required'/>
+  </complexType>
+ </element>
+
+ <element name='roundinfo'>
+  <complexType>
+   <sequence>
+    <element ref='t:date' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='players'>
+  <complexType>
+   <sequence>
+    <element ref='t:player' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='games'>
+  <complexType>
+   <sequence>
+    <element ref='t:game' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='game'>
+  <complexType>
+   <sequence>
+    <element ref='t:gameinfo'/>
+    <element ref='t:moves' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:setofcomments' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:diagrams' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+   <attribute name='type' type='string' use='fixed' value='chess'/>
+   <attribute name='variant' type='string' use='fixed' value='classic'/>
+   <attribute name='id' type='ID' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='gameinfo'>
+  <complexType>
+   <sequence>
+    <element ref='t:rules' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:eventinfo' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:date' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:opponents'/>
+    <element ref='t:result'/>
+   </sequence>
+   <attribute name='round-nr' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='rules'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='eventinfo'>
+  <complexType>
+   <sequence>
+    <element ref='t:event' minOccurs='0' maxOccurs='unbounded'/>
+    <element ref='t:site' minOccurs='0' maxOccurs='unbounded'/>
+    <element ref='t:date' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+   <attribute name='eventId' type='ID' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='event'>
+  <complexType mixed='true'>
+   <attribute name='type' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='wcc'/>
+      <enumeration value='tournament'/>
+      <enumeration value='match'/>
+      <enumeration value='teamevent'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='mode' type='string' use='optional'/>
+   <attribute name='nr' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='site'>
+  <complexType mixed='true'>
+  </complexType>
+ </element>
+
+ <element name='date'>
+  <complexType>
+   <attribute name='day' type='string' use='optional'/>
+   <attribute name='month' type='string' use='optional'/>
+   <attribute name='year' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='opponents'>
+  <complexType>
+   <sequence>
+    <element ref='t:white'/>
+    <element ref='t:black'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='white'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:player'/>
+    <element ref='t:player-ref'/>
+   </choice>
+  </complexType>
+ </element>
+
+ <element name='black'>
+  <complexType>
+   <choice maxOccurs='unbounded'>
+    <element ref='t:player'/>
+    <element ref='t:player-ref'/>
+   </choice>
+  </complexType>
+ </element>
+
+ <element name='player'>
+  <complexType>
+   <choice>
+    <element ref='t:person'/>
+    <element ref='t:computer'/>
+   </choice>
+   <attribute name='id' type='ID' use='optional'/>
+   <attribute name='table-ref' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='player-ref'>
+  <complexType>
+   <attribute name='ref' type='string' use='optional'/>
+  </complexType>
+ </element>
+
+ <element name='result'>
+  <complexType>
+   <attribute name='res' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='1-0'/>
+      <enumeration value='0-1'/>
+      <enumeration value='draw'/>
+      <enumeration value='unknown'/>
+      <enumeration value='noresult'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='why' use='required'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='resigned'/>
+      <enumeration value='agreed'/>
+      <enumeration value='mate'/>
+      <enumeration value='stalemate'/>
+      <enumeration value='time'/>
+      <enumeration value='rules'/>
+      <enumeration value='adjudication'/>
+      <enumeration value='bye'/>
+      <enumeration value='emergency'/>
+      <enumeration value='death'/>
+      <enumeration value='forfeit'/>
+      <enumeration value='withdrawn'/>
+      <enumeration value='abandoned'/>
+      <enumeration value='notyetplayed'/>
+      <enumeration value='notyetfinished'/>
+      <enumeration value='reasonUnknown'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='c' use='optional'>
+    <simpleType>
+     <restriction base='string'>
+      <enumeration value='w'/>
+      <enumeration value='b'/>
+     </restriction>
+    </simpleType>
+   </attribute>
+   <attribute name='opp-id' type='string' use='optional'/>
+   <attribute name='game-ref' type='IDREF' use='optional'/>
+  </complexType>
+ </element>
+</schema>
